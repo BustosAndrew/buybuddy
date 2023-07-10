@@ -4,51 +4,40 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Understanding Your Needs",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "BuyBuddy initiates comprehensive individual questions with you to thoroughly comprehend your budget, shopping needs, interests, and preferences.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "AI-Powered Recommendations",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "With your needs identified, BuyBuddy uses its vast product knowledge to suggest the most suitable products from Amazon. Rest assured, these recommendations are tailored specifically to your desired requirements.",
+    icon: "icon-park-outline:robot",
   },
   {
-    title: "On-Demand Components",
+    title: "Direct Product Links",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "To facilitate a smooth shopping experience, BuyBuddy provides direct product links. A simple click on the link will take you directly to the product page on Amazon, ensuring you can proceed to purchase without any hassle.",
+    icon: "clarity:link-line",
   },
   {
-    title: "Broad Integration",
+    title: "Reccommendation Explanation",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "BuyBuddy does not simply suggest a product; it highlights its key features and explains how the product meets your specific needs. This way, you can make informed purchasing decisions confidently.",
+    icon: "icon-park-outline:doc-detail",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    BuyBuddy is a FREE cutting-edge AI tool
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    With the wealth of product knowledge at its disposal, BuyBuddy is dedicated
+    to transforming your shopping experience into a seamless and personalized
+    process.
   </p>
 </div>
 
@@ -56,7 +45,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>

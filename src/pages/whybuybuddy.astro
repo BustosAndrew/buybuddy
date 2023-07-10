@@ -1,0 +1,80 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import WhyBuyBuddy from "@components/whybuybuddy.astro";
+
+const pricing = [
+  // {
+  //   name: "Personal",
+  //   price: "Free",
+  //   popular: false,
+  //   features: [
+  //     "Lifetime free",
+  //     "Up to 3 users",
+  //     "Unlimited Pages",
+  //     "Astro Sub domain",
+  //     "Basic Integrations",
+  //     "Community Support",
+  //   ],
+  //   button: {
+  //     text: "Get Started",
+  //     link: "/",
+  //   },
+  // },
+  {
+    name: "Startup",
+    price: {
+      monthly: "$19",
+      annual: "$16",
+      discount: "10%",
+      original: "$24",
+    },
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "20 Custom domains",
+      "Unlimited Collaborators",
+      "Advanced Integrations",
+      "Priority Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+  // {
+  //   name: "Enterprise",
+  //   price: "Custom",
+  //   popular: false,
+  //   features: [
+  //     "All Pro Features",
+  //     "Unlimited Custom domains",
+  //     "99.99% Uptime SLA",
+  //     "SAML & SSO Integration",
+  //     "Dedicated Account Manager",
+  //     "24/7 Phone Support",
+  //   ],
+  //   button: {
+  //     text: "Contact us",
+  //     link: "/contact",
+  //   },
+  // },
+];
+---
+
+<Layout title="WhyBuyBuddy">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Why BuyBuddy?</Fragment>
+      <Fragment slot="desc">
+        With BuyBuddy, you can get the best product recommendations in seconds.
+      </Fragment>
+    </Sectionhead>
+  </Container>
+
+  <div class="flex mx-auto justify-center mt-12">
+    {pricing.map((item) => <WhyBuyBuddy plan={item} />)}
+  </div>
+</Layout>
