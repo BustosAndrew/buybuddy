@@ -26,15 +26,15 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Empowering the consumer world with BuyBuddy.
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from the US and AUS! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job.
+        We're a multi-cultural team from the USA and Australia! We come from
+        diverse backgrounds, bringing different personalities, experiences and
+        skills to the job.
       </p>
     </div>
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-12">
       {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
+        publishedTeamMembers.map((teamMemberEntry, index) => (
+          <div class=`group ${index == 0 ? "order-last": ""}`>
             <div class="w-full aspect-square">
               <Picture
                 src={teamMemberEntry.data.avatar.src}
