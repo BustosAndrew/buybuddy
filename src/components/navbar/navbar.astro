@@ -5,6 +5,7 @@ import Dropdown from "./dropdown.astro";
 import heroImage from "assets/logo.jpg";
 import { Picture } from "@astrojs/image/components";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from "astro-icon";
 
 const menuitems = [
   // {
@@ -81,6 +82,13 @@ const menuitems = [
               </>
             ))
           }
+          <Link
+            style="outline"
+            href="#"
+            class="rounded-full flex gap-1 items-center justify-center">
+            <Icon class="w-5 h-5" name="maki:arrow" />
+            Try for Free
+          </Link>
         </ul>
         <!-- <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>
